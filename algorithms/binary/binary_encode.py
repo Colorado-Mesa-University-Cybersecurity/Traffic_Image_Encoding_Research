@@ -54,7 +54,7 @@ def convert_samples_to_binary(df: pd.DataFrame, precision: 32 or 64 = 64, one: i
             sample_out.append(feature_out)
         out.append(sample_out)
 
-    return np.array(out)
+    return np.array(out, dtype=np.uint8)
 
 
 def save_sample_as_image(sample: np.ndarray, path: str, name: str) -> None:
